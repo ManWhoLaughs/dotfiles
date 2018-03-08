@@ -1,6 +1,9 @@
 filetype on
 filetype plugin on
 
+colorscheme slate
+
+set et
 set tabstop=8
 set shiftwidth=4
 set smarttab
@@ -31,19 +34,16 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 autocmd FileType c set omnifunc=ccomplete#Complete
 set completeopt=menu
 
-" C(trl)+d - дублирование текущей строки
 imap <C-d> <esc>yypi
-" " Ctrl-пробел дл€ автодополнени€
+
 inoremap <C-space> <C-x><C-o>
-"" ¬ырезать-копировать-вставить через Ctrl
-" CTRL-X - вырезать
+
 vnoremap <C-X> "+x
-" CTRL-C - копировать
+
 vnoremap <C-C> "+y
-" CTRL-V вставить под курсором
+
 map <C-V>      "+gP
-" "" ќтменить-вернуть через Ctrl
-" " отмена действи€
+
 noremap <C-Z> u
 inoremap <C-Z> <C-O>u
 
