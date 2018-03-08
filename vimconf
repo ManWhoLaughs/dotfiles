@@ -1,0 +1,49 @@
+filetype on
+filetype plugin on
+
+set tabstop=8
+set shiftwidth=4
+set smarttab
+set expandtab
+set softtabstop=4
+set autoindent
+let python_highlight_all = 1
+set t_Co=256
+set whichwrap=b,<,>,[,],l,h
+syntax on
+set nu
+set novisualbell
+set showtabline=0
+set wrap
+set linebreak
+set nobackup
+set noswapfile
+set encoding=utf-8
+set fileencodings=untf8,cp1251
+
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType tt2html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType css set omnifunc=csscomplete#CompleteCSS
+autocmd FileType xml set omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+autocmd FileType c set omnifunc=ccomplete#Complete
+set completeopt=menu
+
+" C(trl)+d - дублирование текущей строки
+imap <C-d> <esc>yypi
+" " Ctrl-пробел дл€ автодополнени€
+inoremap <C-space> <C-x><C-o>
+"" ¬ырезать-копировать-вставить через Ctrl
+" CTRL-X - вырезать
+vnoremap <C-X> "+x
+" CTRL-C - копировать
+vnoremap <C-C> "+y
+" CTRL-V вставить под курсором
+map <C-V>      "+gP
+" "" ќтменить-вернуть через Ctrl
+" " отмена действи€
+noremap <C-Z> u
+inoremap <C-Z> <C-O>u
+
